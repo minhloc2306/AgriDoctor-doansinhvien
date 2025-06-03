@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "680c655ef6a7d428c876f788"
+  },
+  "name": "Nấm",
+  "description": "Nấm",
+  "createdAt": {
+    "$date": "2025-04-26T04:47:26.722Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680c6568f6a7d428c876f78b"
+  },
+  "name": "Virus",
+  "description": "Virus",
+  "createdAt": {
+    "$date": "2025-04-26T04:47:36.391Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "680c6572f6a7d428c876f78e"
+  },
+  "name": "Sâu bệnh",
+  "description": "Sâu bệnh",
+  "createdAt": {
+    "$date": "2025-04-26T04:47:46.260Z"
+  },
+  "__v": 0
+}]

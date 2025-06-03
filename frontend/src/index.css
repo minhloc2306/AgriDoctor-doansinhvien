@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: Add global styles below if needed */
+/* Ensure html and body take full height for min-h-screen to work reliably */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Apply border-box globally */
+}
+
+*, *::before, *::after {
+  box-sizing: inherit; /* Inherit border-box */
+}
