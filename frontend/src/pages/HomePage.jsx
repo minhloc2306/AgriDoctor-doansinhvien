@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import { getAllDiseases } from '../services/diseaseService';
 import { FiSearch, FiChevronRight, FiCamera, FiDatabase, FiAward, FiUsers } from 'react-icons/fi';
 import DiseaseCard from '../components/DiseaseCard';
-import VisitorStats from '../components/VisitorStats'; // ✅ Thống kê truy cập
-
 
 const HomePage = () => {
     const [diseases, setDiseases] = useState([]);
@@ -196,10 +194,6 @@ const HomePage = () => {
                     </div>
                 </div>
             </div>
-            {/* Visitor Statistics Section */}
-<div className="container mx-auto px-4 py-12">
-  <VisitorStats />
-</div>
 
         </div>
     );

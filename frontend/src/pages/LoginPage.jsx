@@ -122,7 +122,7 @@ function LoginPage() {
           <div>
             <button
               type="submit"
-              disabled={isLoading} // Use isLoading from context
+              disabled={isLoading} // Nút đăng nhập
               className={`group relative w-full flex justify-center items-center py-2.5 px-4 border border-transparent text-sm font-medium rounded-lg text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 shadow-sm transition duration-150 ease-in-out ${isLoading ? 'opacity-60 cursor-not-allowed' : ''}`}
             >
               <span className="absolute left-0 inset-y-0 flex items-center pl-3">

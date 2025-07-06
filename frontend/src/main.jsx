@@ -1,27 +1,29 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import './index.css'
-import { AuthProvider } from './context/AuthContext'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./index.css";
+import { AuthProvider } from "./context/AuthContext";
 
-import AdminLayout from './layouts/AdminLayout'
-import PublicLayout from './layouts/PublicLayout'
+import AdminLayout from "./layouts/AdminLayout";
+import PublicLayout from "./layouts/PublicLayout";
 
-import ProtectedRoute from './components/ProtectedRoute'
+import ProtectedRoute from "./components/ProtectedRoute";
 
-import LoginPage from './pages/LoginPage'
-import RegisterPage from './pages/RegisterPage'
-import HomePage from './pages/HomePage'
-import DiseaseDetailPage from './pages/DiseaseDetailPage'
-import ContactPage from './pages/ContactPage'
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
+import HomePage from "./pages/HomePage";
+import DiseaseDetailPage from "./pages/DiseaseDetailPage";
+import ContactPage from "./pages/ContactPage";
 
-import AdminDashboard from './pages/admin/AdminDashboard'
-import ManageDiseasesPage from './pages/admin/ManageDiseasesPage'
-import ManageFeedbackPage from './pages/admin/ManageFeedbackPage'
-import ManageUsersPage from './pages/admin/ManageUsersPage'
-import ManageCategoriesPage from './pages/admin/ManageCategoriesPage'
+import AdminDashboard from "./pages/admin/AdminDashboard";
+import ManageDiseasesPage from "./pages/admin/ManageDiseasesPage";
+import ManageFeedbackPage from "./pages/admin/ManageFeedbackPage";
+import ManageUsersPage from "./pages/admin/ManageUsersPage";
+import ManageCategoriesPage from "./pages/admin/ManageCategoriesPage";
+import NotFound from "./pages/NotFound";
+import AdminNotFound from "./pages/admin/AdminNotFound";
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Router>
       <AuthProvider>
@@ -32,19 +34,21 @@ createRoot(document.getElementById('root')).render(
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/diseases/:id" element={<DiseaseDetailPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
 
-          <Route element={<ProtectedRoute allowedRoles={['admin']} />}>
+          <Route element={<ProtectedRoute allowedRoles={["admin"]} />}>
             <Route path="/admin" element={<AdminLayout />}>
               <Route index element={<AdminDashboard />} />
               <Route path="categories" element={<ManageCategoriesPage />} />
               <Route path="diseases" element={<ManageDiseasesPage />} />
               <Route path="feedback" element={<ManageFeedbackPage />} />
               <Route path="users" element={<ManageUsersPage />} />
+              <Route path="*" element={<AdminNotFound/>}/>
             </Route>
           </Route>
         </Routes>
       </AuthProvider>
     </Router>
-  </StrictMode>,
-)
+  </StrictMode>
+);
