@@ -1,6 +1,6 @@
 //Require
 - Sử dụng MongoDB Compass quản lý dữ liệu
-- Localhost (`mongodb://localhost:27017`)
+- Localhost (`mongodb://localhost:27017/agriDoctorDB`)
 
 //Database
 - Import file data vào MongoDB Compass
